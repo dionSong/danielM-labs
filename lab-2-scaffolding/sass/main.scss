@@ -1,0 +1,47 @@
+@import 'variables';
+@import 'globals';
+
+body {
+    background-color: black;
+}
+
+div {
+    border: 1px solid orange;
+}
+
+nav {
+    background-color: black;
+}
+
+.container {
+    width: 95%;
+    margin: auto    ;
+    
+}
+
+.second-row .row {
+    margin: auto;
+    background-color: #ecf0f1;
+}
+
+.hello {
+    h1,p {
+        text-align: center;
+    }
+}
+
+
+.card-align {
+    display: flex;
+    align-items: center;
+}
+
+.container .row {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.s4 img {
+    width: 100%;
+    
+}

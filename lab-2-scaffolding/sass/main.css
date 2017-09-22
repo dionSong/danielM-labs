@@ -3,33 +3,19 @@
 
 body {
   background-color: black; }
-
-div {
-  border: 1px solid orange; }
-
-nav {
-  background-color: black; }
-
-.container {
-  width: 95%;
-  margin: auto; }
-
-.second-row .row {
-  margin: auto;
-  background-color: #ecf0f1; }
-
-.hello h1, .hello p {
-  text-align: center; }
-
-.card-align {
-  display: flex;
-  align-items: center; }
-
-.container .row {
-  margin-left: auto;
-  margin-right: auto; }
-
-.s4 img {
-  width: 100%; }
+  body .container {
+    width: 95%;
+    margin: auto; }
+    body .container .row {
+      margin: auto; }
+    body .container .second-row .row {
+      margin: auto;
+      background-color: #ecf0f1; }
+      body .container .second-row .row h1, body .container .second-row .row p {
+        text-align: center; }
+  body nav {
+    background-color: black; }
+  body .s4 img {
+    width: 100%; }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,6 +1,42 @@
 * {
   box-sizing: border-box; }
 
+div {
+  border: 1px solid orange; }
+
+body .container .container-width {
+  width: 75%; }
+
+.text-center {
+  text-align: center; }
+
+.section {
+  padding: 0; }
+
+.form .row .hello {
+  color: white;
+  margin: auto;
+  width: 75%; }
+
+form {
+  color: white;
+  padding: auto;
+  border-radius: 2px; }
+
+input, textarea {
+  background-color: white !important;
+  color: black; }
+
+textarea {
+  height: 25vh; }
+
+button {
+  position: relative;
+  left: 45%;
+  margin-top: 20px;
+  color: black;
+  padding: 10px 20px; }
+
 body {
   background-color: black; }
   body .container {
@@ -11,11 +47,33 @@ body {
     body .container .second-row .row {
       margin: auto;
       background-color: #ecf0f1; }
-      body .container .second-row .row h1, body .container .second-row .row p {
-        text-align: center; }
+      body .container .second-row .row .hello {
+        width: 25%;
+        padding: 0; }
+        body .container .second-row .row .hello h1 {
+          font-size: 2em; }
+      body .container .second-row .row .margin-rigth {
+        margin-right: 10%; }
   body nav {
     background-color: black; }
   body .s4 img {
     width: 100%; }
+  body .section-two h2 {
+    border-bottom: 3px solid black;
+    padding-bottom: 10px;
+    margin-top: 2px;
+    font-size: 2em; }
+  body .section-three .col {
+    padding: 0px; }
+  body .section-three .container-three {
+    width: 100%;
+    background: black; }
+  body .footer {
+    color: white;
+    text-align: center;
+    border-top: 1px solid white;
+    margin-top: 45px; }
+    body .footer h6 {
+      padding: 10px; }
 
 /*# sourceMappingURL=main.css.map */

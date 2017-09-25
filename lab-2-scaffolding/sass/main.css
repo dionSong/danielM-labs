@@ -1,9 +1,6 @@
 * {
   box-sizing: border-box; }
 
-div {
-  border: 1px solid orange; }
-
 body .container .container-width {
   width: 75%; }
 
@@ -75,5 +72,7 @@ body {
     margin-top: 45px; }
     body .footer h6 {
       padding: 10px; }
+  body .carousel h1 {
+    color: #fff; }
 
 /*# sourceMappingURL=main.css.map */

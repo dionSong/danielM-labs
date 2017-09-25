@@ -1,0 +1,41 @@
+div {
+  border: 1px solid orange; }
+
+.container .row {
+  margin: auto; }
+
+.container {
+  width: 80%; }
+
+.container nav {
+  background-color: #162039; }
+
+h1 {
+  color: #fff; }
+
+.text-container {
+  width: 70%;
+  margin: auto; }
+
+nav {
+  background-color: #162039; }
+
+#introduction {
+  background-color: #C5DBE3; }
+  #introduction .row .col .card-panel {
+    background-color: #478FBD; }
+
+#parallax .text-container h4 {
+  border-bottom: 3px solid black;
+  padding-bottom: 5px; }
+
+.img-size img {
+  width: 100%; }
+
+div.img-size {
+  padding: 0; }
+
+.row .col {
+  padding: 0; }
+
+/*# sourceMappingURL=style.css.map */

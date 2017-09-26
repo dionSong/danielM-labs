@@ -1,5 +1,6 @@
 @import 'variables'
 @import 'globals'
+@import 'mixins'
 
 body 
     background-color: $primary-color
@@ -10,7 +11,7 @@ body
         .row
             margin: auto
         .second-row .row 
-            margin: auto
+            @extend .row
             background-color: #ecf0f1  
 
             .hello 
@@ -26,8 +27,7 @@ body
     nav 
         background-color: $primary-color
 
-    .s4 img 
-        width: 100%
+
 
     .section-two 
         h2
@@ -57,7 +57,8 @@ body
 
             
     .carousel h1 
-        color: #fff
+        color: white
+        font-size: 3em
  
 
       

@@ -10,10 +10,10 @@ body .container .container-width {
 .section {
   padding: 0; }
 
-.form .row .hello {
+.form .row .hello, .form body .container .second-row .row .hello, body .container .second-row .form .row .hello {
   color: white;
   margin: auto;
-  width: 75%; }
+  widows: 75%; }
 
 form {
   color: white;
@@ -34,15 +34,17 @@ button {
   color: black;
   padding: 10px 20px; }
 
+.img-size img {
+  width: 100%; }
+
 body {
   background-color: black; }
   body .container {
     width: 95%;
     margin: auto; }
-    body .container .row {
+    body .container .row, body .container .second-row .row {
       margin: auto; }
     body .container .second-row .row {
-      margin: auto;
       background-color: #ecf0f1; }
       body .container .second-row .row .hello {
         width: 25%;
@@ -53,8 +55,6 @@ body {
         margin-right: 10%; }
   body nav {
     background-color: black; }
-  body .s4 img {
-    width: 100%; }
   body .section-two h2 {
     border-bottom: 3px solid black;
     padding-bottom: 10px;
@@ -73,6 +73,7 @@ body {
     body .footer h6 {
       padding: 10px; }
   body .carousel h1 {
-    color: #fff; }
+    color: white;
+    font-size: 3em; }
 
 /*# sourceMappingURL=main.css.map */

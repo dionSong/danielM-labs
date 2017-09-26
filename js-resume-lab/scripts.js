@@ -13,11 +13,11 @@ console.log('My Interests are: ' + myInterest);
 
 //Experience
 function displayPosition(companyName, jobTitle, description){
-    console.log(jobTitle + ',' + ' ' + description + ' at ' + companyName);
+    console.log('* ' + jobTitle + ' at ' + companyName + ' - ' + description);
 }
 
 console.log('My Experience:');
-displayPosition('Bankity', 'Digital Marketing', 'SEO, ASO, Content Marketing');
+displayPosition('Bankity', 'Digital Marketer', 'Did SEO, ASO and Content Marketing');
 
 //Skills
 function displaySkill(skillName, boolean){

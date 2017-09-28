@@ -1,0 +1,23 @@
+body {
+    background-color: #49E394;
+}
+
+div {
+    border-radius: 10px;
+}
+
+h1, p{
+    padding: 20px;
+}
+
+h1 {
+    color: white;
+}
+
+.friend {
+    background-color: #9DBFE3;
+}
+
+h3 {
+    text-transform: uppercase;
+}

@@ -1,0 +1,22 @@
+.square {
+    height: 10em;
+    width: 10em;
+    background-color: green;
+    float: left;
+    margin: 1em;
+    
+}
+
+p {
+    color: white;
+}
+
+.btn {
+    display: block; 
+    margin-left: 40%;
+}
+
+div {
+    text-align: center;
+    color: white;
+}

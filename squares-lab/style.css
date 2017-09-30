@@ -1,9 +1,10 @@
 .square {
-    height: 10em;
-    width: 10em;
-    background-color: green;
+    height: 190px;
+    width: 190px;
+    background-color: black;
     float: left;
     margin: 1em;
+
     
 }
 
@@ -13,10 +14,62 @@ p {
 
 .btn {
     display: block; 
-    margin-left: 40%;
+    
+    margin-left: 45%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+    
+}
+.btn {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 250px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  display: block; 
+  margin-left: 45%;
+  margin-bottom: 1%;
+  margin-top: 1%;
+}
+
+.btn span {
+  
+  position: relative;
+  transition: 0.5s;
+}
+
+.butn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.btn:hover span {
+  padding-right: 25px;
+}
+
+.btn:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 
 div {
     text-align: center;
     color: white;
+    font-size: 40px;
+    vertical-align: middle;
+}
+
+body {
+    text-align: center;
+    background-color: #A2DED0;
 }

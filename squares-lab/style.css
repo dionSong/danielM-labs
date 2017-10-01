@@ -1,25 +1,12 @@
+
 .square {
-    height: 190px;
-    width: 190px;
-    background-color: black;
-    float: left;
-    margin: 1em;
-
-    
+  height: 190px;
+  width: 190px;
+  background-color: black;
+  float: left;
+  margin: 1em;  
 }
 
-p {
-    color: white;
-}
-
-.btn {
-    display: block; 
-    
-    margin-left: 45%;
-    margin-bottom: 1%;
-    margin-top: 1%;
-    
-}
 .btn {
   border-radius: 4px;
   background-color: #f4511e;
@@ -39,7 +26,6 @@ p {
 }
 
 .btn span {
-  
   position: relative;
   transition: 0.5s;
 }
@@ -63,13 +49,13 @@ p {
 }
 
 div {
-    text-align: center;
-    color: white;
-    font-size: 40px;
-    vertical-align: middle;
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  vertical-align: middle;
 }
 
 body {
-    text-align: center;
-    background-color: #A2DED0;
-}
+  text-align: center;
+  background-color: #A2DED0;
+}   

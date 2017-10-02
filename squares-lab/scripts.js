@@ -17,6 +17,9 @@ squareBtn.addEventListener('click', createDiv);
         var newDiv = document.createElement('div');
         newDiv.className = 'square';
 
+        var newDivText = document.createElement('h3');
+        newDiv.appendChild(newDivText);
+
         //Push to the array before .length
         totalSquares.push(newDiv);
         newDiv.id = totalSquares.length;
@@ -28,11 +31,11 @@ squareBtn.addEventListener('click', createDiv);
         newDiv.addEventListener('mouseout', hideId);
         
         function showId(){
-            newDiv.innerText = newDiv.id;
+            newDivText.innerText = newDiv.id;
         }
         
         function hideId(){
-            newDiv.innerText = ' ';
+            newDivText.innerText = ' ';
         }
 
         //Div On Click change Color

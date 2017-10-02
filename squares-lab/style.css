@@ -1,7 +1,7 @@
 
 .square {
-  height: 190px;
-  width: 190px;
+  height: 180px;
+  width: 180px;
   background-color: black;
   float: left;
   margin: 1em;  
@@ -13,7 +13,7 @@
   border: none;
   color: #FFFFFF;
   text-align: center;
-  font-size: 28px;
+  font-size: 24px;
   padding: 20px;
   width: 250px;
   transition: all 0.5s;
@@ -59,3 +59,4 @@ body {
   text-align: center;
   background-color: #A2DED0;
 }   
+

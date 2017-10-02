@@ -5,9 +5,8 @@ var squareBtn = document.createElement('button');
 var spanBtn = document.createElement('span');
 squareBtn.className = 'btn';
 spanBtn.innerText = 'Add a Square!';
-
-
 squareBtn.appendChild(spanBtn);
+
 document.body.appendChild(squareBtn);
 
 //Btn On Click Create a Div

@@ -1,3 +1,68 @@
+// var sentences = [
+//     'this is my first sentence',
+//     'Too ato too nOt enot one totA not anot tOO aNot',
+//     'oat itain oat tainnate eate tea anne inant nean',
+//     'itant eate anot eat nato inate eatanot tain eat',
+//     'nee ene ate ite tent tiet ent ine ene ete ene ate'
+// ];
+
+// var upper,
+//     lower;
+
+
+// $(document).ready(() => {
+//     upper = $('#keyboard-upper-container');
+//     lower = $('#keyboard-lower-container');
+
+//     toggleKeyboards();
+
+//     $(document).on('keyup keydown', (e) => {
+//         handleKeyPress(e.type, e.shiftKey, e.keyCode);
+//     });
+// });
+
+// function handleKeyPress(type, isShift, keyCode) {
+//     if (keyCode === 16) {
+//         if (type === 'keydown') {
+//             toggleKeyboards(true);
+//         } else {
+//             toggleKeyboards();
+//         }
+//     }
+
+//     var trueKeyCode = configureTrueKeyCode(keyCode, isShift);
+
+//     handleHighlight(trueKeyCode, type);
+// }
+
+// function handleHighlight(keyCode, type) {
+//     if (type === 'keydown') {
+//         $('#' + keyCode).css('background-color', '#A2DED0');
+//     } else {
+//         $('#' + keyCode).css('background-color', '#f5f5f5');
+//     }
+// }
+
+// function configureTrueKeyCode(keyCode, isShift) {
+//     if (isShift === false && keyCode >= 65 && keyCode <= 90) {
+//         return keyCode + 32;
+//     }
+
+//     return keyCode;
+// }
+
+// function toggleKeyboards(showUpper) {
+//     if (showUpper) {
+//         lower.hide();
+//         upper.show();
+//     } else {
+//         upper.hide();
+//         lower.show();
+//     }
+// }
+
+//My code
+
 // A $( document ).ready() block.
 $( document ).ready(function() {
     //Hide Upper Keyboard
@@ -18,12 +83,31 @@ $( document ).ready(function() {
             $("#keyboard-upper-container").show();
         }
     });    
-//code Above here works
 
+    //highligth keys being pressed
     $(document).keypress(function(e){
-        e = 
-        $('#' + e.keycode).css(background-color, yellow);
-    });
+        
+        var pressedK = $('#' + e.keyCode).css("background-color", "#D2D7D3");  
+
+        $(document).keyup(function(e){
+            if(pressedK.css("background-color", "#D2D7D3")){
+                $(pressedK).css("background-color", "white");
+            }   
+        })  
+        
+        
+    });  
+
+    $("#sentence").append("<p class = 'sentence'></p>");
+    
+    sentenceCounter = 0;
+        
+    $(".sentence").text(sentences[sentenceCounter++]);
+
+
+    var sentences = ['ten ate neite ate nee enet ite ate inet ent eate', 'Too ato too nOt enot one totA not anot tOO aNot', 'oat itain oat tainnate eate tea anne inant nean', 'itant eate anot eat nato inate eatanot tain eat', 'nee ene ate ite tent tiet ent ine ene ete ene ate'];
+    
+    
 
 
 });
@@ -43,26 +127,11 @@ $( document ).ready(function() {
 
 
 
-
-
-
-// * When keys are pressed, they should be highlighted in the browser.
-
-// * Hint: the letters should be matched with the corresponding ascii code. The id value of the key in the html corresponds to the ASCII character code that you can access in the keyboard listener. For example, ascii value 65 is A, and 97 is a.
-
 // * The sentences in the provided array should be displayed at the top of the page one sentence at a time. Once the sentence has been completed, the next in line should appear. There is already a div with id="sentence" in your html file. This is where you will display the sentences one at a time.
 
-// ```
 
-// var sentences = ['ten ate neite ate nee enet ite ate inet ent eate',
 
-// 'Too ato too nOt enot one totA not anot tOO aNot', 'oat itain oat tain
 
-// nate eate tea anne inant nean', 'itant eate anot eat nato inate eat
-
-// anot tain eat', 'nee ene ate ite tent tiet ent ine ene ete ene ate'];
-
-// ```
 
 // * You should highlight the currently expected letter in the on-screen sentence that should be typed next
 

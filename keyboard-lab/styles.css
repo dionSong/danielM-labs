@@ -44,3 +44,8 @@
   .highlighted {
     background-color: yellow;
   }
+
+  .sentence {
+    padding-left: 150px;
+    float: left;
+  }

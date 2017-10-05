@@ -1,115 +1,58 @@
-// var sentences = [
-//     'this is my first sentence',
-//     'Too ato too nOt enot one totA not anot tOO aNot',
-//     'oat itain oat tainnate eate tea anne inant nean',
-//     'itant eate anot eat nato inate eatanot tain eat',
-//     'nee ene ate ite tent tiet ent ine ene ete ene ate'
-// ];
 
-// var upper,
-//     lower;
+ var sentences = ['ten ate neite ate nee enet ite ate inet ent eate', 'Too ato too nOt enot one totA not anot tOO aNot', 'oat itain oat tainnate eate tea anne inant nean', 'itant eate anot eat nato inate eatanot tain eat', 'nee ene ate ite tent tiet ent ine ene ete ene ate'];
 
+var upper,
+lower,
+trueKey;
 
-// $(document).ready(() => {
-//     upper = $('#keyboard-upper-container');
-//     lower = $('#keyboard-lower-container');
-
-//     toggleKeyboards();
-
-//     $(document).on('keyup keydown', (e) => {
-//         handleKeyPress(e.type, e.shiftKey, e.keyCode);
-//     });
-// });
-
-// function handleKeyPress(type, isShift, keyCode) {
-//     if (keyCode === 16) {
-//         if (type === 'keydown') {
-//             toggleKeyboards(true);
-//         } else {
-//             toggleKeyboards();
-//         }
-//     }
-
-//     var trueKeyCode = configureTrueKeyCode(keyCode, isShift);
-
-//     handleHighlight(trueKeyCode, type);
-// }
-
-// function handleHighlight(keyCode, type) {
-//     if (type === 'keydown') {
-//         $('#' + keyCode).css('background-color', '#A2DED0');
-//     } else {
-//         $('#' + keyCode).css('background-color', '#f5f5f5');
-//     }
-// }
-
-// function configureTrueKeyCode(keyCode, isShift) {
-//     if (isShift === false && keyCode >= 65 && keyCode <= 90) {
-//         return keyCode + 32;
-//     }
-
-//     return keyCode;
-// }
-
-// function toggleKeyboards(showUpper) {
-//     if (showUpper) {
-//         lower.hide();
-//         upper.show();
-//     } else {
-//         upper.hide();
-//         lower.show();
-//     }
-// }
-
-//My code
 
 // A $( document ).ready() block.
-$( document ).ready(function() {
+$(document).ready(function() {
     //Hide Upper Keyboard
-    $("#keyboard-upper-container").hide();
+    upper = $("#keyboard-upper-container");
+    lower = $("#keyboard-lower-container");
 
-    //When presing shift show upper keyboard and hide lower keyboard
-    $(document).keyup(function (shift) {
-        if (shift.keyCode == 16) {
-            
-            $("#keyboard-lower-container").show();
-            $("#keyboard-upper-container").hide();
-        }
+    upper.hide();
+
+     $(document).on('keyup keydown', function(e) {
+         if(e.which === 16 && e.type === 'keyup'){
+           upper.hide();
+           lower.show();
+           
+
+          } else if (e.which === 16 && e.type === 'keydown'){
+                upper.show();
+                lower.hide();
+                
+          }
+       
+       var trueKey = e.which;
+     if (e.type === "keydown" && e.which != 32){
+           $("#" + (e.which + 32)).css("background-color", "red");
+       }
+        
+
+       
+       
+    //    var pressedKey = e.which;
+    //    if(e.type === "keydown" && e.which === 32) {
+    //          $("#32").css("background-color", "#bdc3c7");
+    //    } else if(e.type === 'keydown'){
+    //        $("#" + (pressedKey + 32)).css("background-color", "#bdc3c7");
+    //    } else{
+    //         $("#" + (pressedKey + 32)).css("background-color", "#f5f5f5");
+    //         $("#32").css("background-color", "#f5f5f5");  
+    //    }
+        
+       
+
+        // $("#" + keyPressed).css("background-color", "red");
+        // $('#' + trueCode).css('background-color', 'pink');
+       
+       //encontrar el keycode y encontrar el span con ese id y cambiarle el background color
+
     });
-    $(document).keydown(function (shift) {
-        if (shift.keyCode == 16) {
-            
-            $("#keyboard-lower-container").hide();
-            $("#keyboard-upper-container").show();
-        }
-    });    
-
-    //highligth keys being pressed
-    $(document).keypress(function(e){
-        
-        var pressedK = $('#' + e.keyCode).css("background-color", "#D2D7D3");  
-
-        $(document).keyup(function(e){
-            if(pressedK.css("background-color", "#D2D7D3")){
-                $(pressedK).css("background-color", "white");
-            }   
-        })  
-        
-        
-    });  
-
-    $("#sentence").append("<p class = 'sentence'></p>");
-    
-    sentenceCounter = 0;
-        
-    $(".sentence").text(sentences[sentenceCounter++]);
-
-
-    var sentences = ['ten ate neite ate nee enet ite ate inet ent eate', 'Too ato too nOt enot one totA not anot tOO aNot', 'oat itain oat tainnate eate tea anne inant nean', 'itant eate anot eat nato inate eatanot tain eat', 'nee ene ate ite tent tiet ent ine ene ete ene ate'];
-    
-    
-
-
+     
 });
 
 
@@ -120,7 +63,10 @@ $( document ).ready(function() {
 
 
 
-
+   
+   
+   
+   
 
 
 

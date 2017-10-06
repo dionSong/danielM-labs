@@ -1,3 +1,68 @@
+var sentences = ['ten ate neite ate nee enet ite ate inet ent eate', 'Too ato too nOt enot one totA not anot tOO aNot', 'oat itain oat tainnate eate tea anne inant nean', 'itant eate anot eat nato inate eatanot tain eat', 'nee ene ate ite tent tiet ent ine ene ete ene ate'];
+
+var pressedK,
+sentenceCounter = 0,
+currentSentence,
+letterCounter;
+
+$(document).ready(function() {
+    //Hide Upper Keyboard
+    $("#keyboard-upper-container").hide();
+
+ $(document).keypress(getSentence());       
+    
+  
+});
+
+//Shift up
+$(document).keyup(function (shift) {
+    if (shift.keyCode == 16) {
+        
+        $("#keyboard-lower-container").show();
+        $("#keyboard-upper-container").hide();
+    }
+});
+//Shift down
+$(document).keydown(function (shift) {
+    if (shift.keyCode == 16) {
+        
+        $("#keyboard-lower-container").hide();
+        $("#keyboard-upper-container").show();
+    }  
+});    
+
+//highligth keys being pressed
+$(document).keypress(function(e){
+    
+    var pressedK = $('#' + e.keyCode).css("background-color", "#D2D7D3");  
+
+    $(document).keyup(function(e){
+        if(pressedK.css("background-color", "#D2D7D3")){
+            $(pressedK).css("background-color", "#f5f5f5");
+        }   
+    })     
+});  
+
+//Get sentence
+
+function getSentence(){
+    currentSentence = sentences[sentenceCounter];
+    
+    
+    var splitSentence = currentSentence.split(' ');
+    console.log(splitSentence);
+    
+    splitSentence.forEach(function(character, index) {
+            $('#sentence').append(`<span id="letter-${index}">${character}</span>`);
+        
+    });
+
+   
+};
+
+
+
+
 // var sentences = [
 //     'this is my first sentence',
 //     'Too ato too nOt enot one totA not anot tOO aNot',
@@ -64,53 +129,6 @@
 //My code
 
 // A $( document ).ready() block.
-$( document ).ready(function() {
-    //Hide Upper Keyboard
-    $("#keyboard-upper-container").hide();
-
-    //When presing shift show upper keyboard and hide lower keyboard
-    $(document).keyup(function (shift) {
-        if (shift.keyCode == 16) {
-            
-            $("#keyboard-lower-container").show();
-            $("#keyboard-upper-container").hide();
-        }
-    });
-    $(document).keydown(function (shift) {
-        if (shift.keyCode == 16) {
-            
-            $("#keyboard-lower-container").hide();
-            $("#keyboard-upper-container").show();
-        }
-    });    
-
-    //highligth keys being pressed
-    $(document).keypress(function(e){
-        
-        var pressedK = $('#' + e.keyCode).css("background-color", "#D2D7D3");  
-
-        $(document).keyup(function(e){
-            if(pressedK.css("background-color", "#D2D7D3")){
-                $(pressedK).css("background-color", "white");
-            }   
-        })  
-        
-        
-    });  
-
-    $("#sentence").append("<p class = 'sentence'></p>");
-    
-    sentenceCounter = 0;
-        
-    $(".sentence").text(sentences[sentenceCounter++]);
-
-
-    var sentences = ['ten ate neite ate nee enet ite ate inet ent eate', 'Too ato too nOt enot one totA not anot tOO aNot', 'oat itain oat tainnate eate tea anne inant nean', 'itant eate anot eat nato inate eatanot tain eat', 'nee ene ate ite tent tiet ent ine ene ete ene ate'];
-    
-    
-
-
-});
 
 
 
